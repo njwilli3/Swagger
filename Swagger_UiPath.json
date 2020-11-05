@@ -5,7 +5,8 @@
     "description": "API for uipathtest.am.flightcentre.com",
     "version": "0.0.1"
   },
-  "host": "uipathtest.am.flightcentre.com",
+  "host": "cloud.uipath.com/flightcentredev/FlightCentreDEVDefault/orchestrator_",
+  "basePath": "/flightcentredev/FlightCentreDEVDefault/orchestrator_/",
   "schemes": [
     "https"
   ],
