@@ -5,7 +5,7 @@
     "description": "API for uipathtest.am.flightcentre.com",
     "version": "0.0.1"
   },
-  "host": "cloud.uipath.com"
+  "host": "cloud.uipath.com",
   "schemes": [
     "https"
   ],
