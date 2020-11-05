@@ -1,0 +1,778 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "Uipath",
+    "description": "API for uipathtest.am.flightcentre.com",
+    "version": "0.0.1"
+  },
+  "host": "uipathtest.am.flightcentre.com",
+  "schemes": [
+    "https"
+  ],
+  "paths": {
+    "/odata/Queues/UiPathODataSvc.AddQueueItem()": {
+      "post": {
+        "tags": [
+          "Odata"
+        ],
+        "description": "Add Queue Item",
+        "operationId": "Add_Queue_Item",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "QueueItem",
+            "in": "body",
+            "description": "Specific Content",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/QueueItem"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/QueueItemResponse"
+            },
+            "examples": {
+              "application/json": {
+                "@odata.context": "https://uipathtest.am.flightcentre.com/odata/$metadata#queueItem/$entity",
+                "QueueDefinitionId": 1917,
+                "ProcessingExceptionId": null,
+                "OutputData": null,
+                "Status": "New",
+                "ReviewStatus": "None",
+                "Key": "5fbaca10-2e9b-4d1f-8f55-82afee493559",
+                "Reference": null,
+                "ProcessingExceptionType": null,
+                "DueDate": null,
+                "Priority": "Low",
+                "DeferDate": null,
+                "StartProcessing": null,
+                "EndProcessing": null,
+                "SecondsInPreviousAttempts": 0,
+                "AncestorId": null,
+                "RetryNumber": 0,
+                "SpecificData": "{\"DynamicProperties\":{\"myTestValue\":\"Test at 3:35 PM\"}}",
+                "CreationTime": "2017-11-03T17:47:35.8964334Z",
+                "Progress": null,
+                "RowVersion": "AAAAAABUhhI=",
+                "Id": 1828715,
+                "SpecificContent": {
+                  "myTestValue": "Test at 3:35 PM"
+                },
+                "Output": null
+              }
+            }
+          }
+        },
+        "security": []
+      }
+    },
+    "/odata/Jobs/UiPath.Server.Configuration.OData.StartJobs": {
+      "post": {
+        "tags": [
+          "Odata"
+        ],
+        "description": "Jobs",
+        "operationId": "StartJobs",
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "StartInfo",
+            "in": "body",
+            "description": "A Model for StartInfo",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/StartJobs"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "security": []
+      }
+    },
+	"/odata/Releases": {
+      "get": {
+        "tags": [
+          "Releases"
+        ],
+        "summary": "Gets multiple releases.",
+        "description": "Client Credentials Flow required permissions: Execution or Execution.Read.\r\n\r\nRequired permissions: Processes.View.",
+        "operationId": "Releases_Get",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "$filter",
+            "description": "Restricts the set of items returned. The maximum number of expressions is 100.",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/Releases"
+            }
+          }
+        }
+      }
+	},
+    "/odata/Robots": {
+      "get": {
+        "tags": [
+          "Robots"
+        ],
+        "summary": "Gets robots.",
+        "description": "Client Credentials Flow required permissions: Robots or Robots.Read.\r\n\r\nRequired permissions: Robots.View.",
+        "operationId": "Robots_Get",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "$expand",
+            "description": "Indicates the related entities to be represented inline. The maximum depth is 2.",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "$filter",
+            "description": "Restricts the set of items returned. The maximum number of expressions is 100.",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "$select",
+            "description": "Limits the properties returned in the result.",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "$orderby",
+            "description": "Specifies the order in which items are returned. The maximum number of expressions is 5.",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "$top",
+            "description": "Limits the number of items returned from a collection. The maximum value is 1000.",
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "in": "query",
+            "name": "$skip",
+            "description": "Excludes the specified number of items of the queried collection from the result.",
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "in": "query",
+            "name": "$count",
+            "description": "Indicates whether the total count of items within a collection are returned in the result.",
+            "type": "boolean"
+          },
+          {
+            "in": "header",
+            "name": "X-UIPATH-OrganizationUnitId",
+            "description": "Folder/OrganizationUnit Id",
+            "type": "integer",
+            "format": "int64"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/Robots"
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Robots"
+        ],
+        "summary": "Creates a new robot.",
+        "description": "Client Credentials Flow required permissions: Robots or Robots.Write.\r\n\r\nRequired permissions: (Robots.Create - Floating Robot) and (Robots.Create and Machines.View - Standard Robot).",
+        "operationId": "Robots_Post",
+        "consumes": [
+          "application/json;odata.metadata=minimal;odata.streaming=true",
+          "application/json;odata.metadata=minimal;odata.streaming=false",
+          "application/json;odata.metadata=minimal",
+          "application/json;odata.metadata=full;odata.streaming=true",
+          "application/json;odata.metadata=full;odata.streaming=false",
+          "application/json;odata.metadata=full",
+          "application/json;odata.metadata=none;odata.streaming=true",
+          "application/json;odata.metadata=none;odata.streaming=false",
+          "application/json;odata.metadata=none",
+          "application/json;odata.streaming=true",
+          "application/json;odata.streaming=false",
+          "application/json",
+          "application/json-patch+json",
+          "application/*+json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/Robot"
+            }
+          },
+          {
+            "in": "header",
+            "name": "X-UIPATH-OrganizationUnitId",
+            "description": "Folder/OrganizationUnit Id",
+            "type": "integer",
+            "format": "int64"
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/Robot"
+            }
+          }
+        }
+      }
+    },
+    "/api/account/authenticate": {
+      "post": {
+        "tags": [],
+        "description": "Account Authentication",
+        "operationId": "authenticate",
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "AccountDetails",
+            "in": "body",
+            "description": "A Model for AccountDetails",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/AccountDetails"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/AuthenticationResponse"
+            }
+          }
+        },
+        "security": []
+      }
+    }
+  },
+  "definitions": {
+    "AccountDetails": {
+      "description": "Model for AccountDetails",
+      "required": [
+        "tenancyName",
+        "usernameOrEmailAddress",
+        "password"
+      ],
+      "properties": {
+        "tenancyName": {
+          "type": "string",
+          "x-example": "K2"
+        },
+        "usernameOrEmailAddress": {
+          "type": "string",
+          "x-example": "admin"
+        },
+        "password": {
+          "type": "string",
+          "x-example": "K2R0ck5!"
+        }
+      }
+    },
+    "AuthenticationResponse": {
+      "description": "Model for Authentication Response",
+      "properties": {
+        "result": {
+          "type": "string"
+        },
+        "targetUrl": {
+          "type": "string"
+        },
+        "success": {
+          "type": "boolean"
+        },
+        "error": {
+          "type": "string"
+        },
+        "unAuthorizedRequest": {
+          "type": "boolean"
+        },
+        "__abp": {
+          "type": "boolean"
+        }
+      }
+    },
+	 "Robot": {
+      "description": "A Robot is an execution host that runs processes built in UiPath Studio.",
+      "required": [
+        "HostingType",
+        "Name",
+        "Type",
+        "Username"
+      ],
+      "type": "object",
+      "properties": {
+        "LicenseKey": {
+          "description": "The key is automatically generated from the server for the Robot machine.\r\n<para />For the robot to work, the same key must exist on both the robot and Orchestrator.\r\n<para />All robots on a machine must have the same license key in order to register correctly.",
+          "maxLength": 255,
+          "minLength": 0,
+          "type": "string"
+        },
+        "MachineName": {
+          "description": "The name of the machine a Robot is hosted on.",
+          "maxLength": 450,
+          "minLength": 0,
+          "type": "string"
+        },
+        "MachineId": {
+          "format": "int64",
+          "description": "The Id of the machine a Robot is hosted on",
+          "type": "integer"
+        },
+        "Name": {
+          "description": "A custom name for the robot.",
+          "maxLength": 19,
+          "minLength": 0,
+          "type": "string"
+        },
+        "Username": {
+          "description": "The machine username. If the user is under a domain, you are required to also specify it in a DOMAIN\\username format.\r\n<para />Note: You must use short domain names, such as desktop\\administrator and NOT desktop.local/administrator.",
+          "maxLength": 100,
+          "minLength": 0,
+          "type": "string"
+        },
+        "ExternalName": {
+          "description": "Contains the value of the key in the external store used to store the password.",
+          "maxLength": 450,
+          "minLength": 0,
+          "type": "string"
+        },
+        "Description": {
+          "description": "Used to add additional information about a robot in order to better identify it.",
+          "maxLength": 500,
+          "minLength": 0,
+          "type": "string"
+        },
+        "Version": {
+          "description": "DEPRECATED. The Robot's Version.",
+          "type": "string",
+          "x-deprecated": true
+        },
+        "Type": {
+          "description": "The Robot type.",
+          "enum": [
+            "NonProduction",
+            "Attended",
+            "Unattended",
+            "Studio",
+            "Development",
+            "StudioX",
+            "Headless",
+            "StudioPro",
+            "TestAutomation"
+          ],
+          "type": "string",
+          "x-ms-enum": {
+            "name": "RobotDtoType",
+            "modelAsString": false
+          }
+        },
+        "HostingType": {
+          "description": "The Robot hosting type (Standard / Floating).",
+          "enum": [
+            "Standard",
+            "Floating"
+          ],
+          "type": "string",
+          "x-ms-enum": {
+            "name": "RobotDtoHostingType",
+            "modelAsString": false
+          }
+        },
+        "ProvisionType": {
+          "description": "The Robot provision type.",
+          "enum": [
+            "Manual",
+            "Automatic"
+          ],
+          "type": "string",
+          "x-ms-enum": {
+            "name": "RobotDtoProvisionType",
+            "modelAsString": false
+          }
+        },
+        "Password": {
+          "description": "The Windows password associated with the machine username.",
+          "maxLength": 100,
+          "minLength": 0,
+          "type": "string"
+        },
+        "CredentialStoreId": {
+          "format": "int64",
+          "description": "The Credential Store used to store the password.",
+          "type": "integer"
+        },
+        "UserId": {
+          "format": "int64",
+          "description": "The associated user's Id.",
+          "type": "integer"
+        },
+        "Enabled": {
+          "description": "Specificies the state of the Robot (enabled/disabled) - a disabled robot cannot connect to Orchestrator",
+          "type": "boolean"
+        },
+        "CredentialType": {
+          "description": "The robot credentials type (Default/ SmartCard)",
+          "enum": [
+            "Default",
+            "SmartCard",
+            "NCipher",
+            "SafeNet"
+          ],
+          "type": "string",
+          "x-ms-enum": {
+            "name": "RobotDtoCredentialType",
+            "modelAsString": false
+          }
+        },
+        "Environments": {
+          "description": "The collection of environments the robot is part of.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/EnvironmentDto"
+          }
+        },
+        "RobotEnvironments": {
+          "description": "The comma separated textual representation of environment names the robot is part of.",
+          "type": "string"
+        },
+        "ExecutionSettings": {
+          "description": "A collection of key value pairs containing execution settings for this robot.",
+          "type": "object",
+          "additionalProperties": {
+            "type": "object"
+          }
+        },
+        "IsExternalLicensed": {
+          "description": "Flag to indicate if the robot uses an external license",
+          "type": "boolean"
+        },
+        "Id": {
+          "format": "int64",
+          "type": "integer"
+        }
+      }
+    },
+    "Robots": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Robot"
+          }
+        }
+      }
+    },
+	"Releases": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ReleasesResponse"
+          }
+        }
+      }
+    },
+	"ReleasesResponse": {
+      "required": [
+        "Name",
+        "ProcessKey",
+        "ProcessVersion"
+      ],
+      "type": "object",
+      "properties": {
+        "Key": {
+          "description": "A unique identifier associated to each release.",
+          "type": "string"
+        },
+        "ProcessKey": {
+          "description": "The unique identifier of the process associated with the release.",
+          "type": "string"
+        },
+        "ProcessVersion": {
+          "description": "The version of the process associated with the release.",
+          "type": "string"
+        },
+        "IsLatestVersion": {
+          "description": "States whether the version of process associated with the release is latest or not.",
+          "type": "boolean"
+        },
+        "IsProcessDeleted": {
+          "description": "States whether the process associated with the release is deleted or not.",
+          "type": "boolean"
+        },
+        "Description": {
+          "description": "Used to add additional information about a release in order to better identify it.",
+          "type": "string"
+        },
+        "Name": {
+          "description": "A custom name of the release. The default name format is ProcessName_EnvironmentName.",
+          "type": "string"
+        },
+        "Id": {
+          "format": "int64",
+          "type": "integer"
+        }
+      }
+    },
+    "StartInfo": {
+      "description": "Model for StartInfo",
+      "required": [
+        "NoOfRobots"
+      ],
+      "properties": {
+        "ReleaseKey": {
+          "type": "string",
+          "x-example": "ebc46c63-042c-4c88-bc86-7462b68970e6"
+        },
+        "RobotIds": {
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "x-example": "[6579]"
+        },
+        "Strategy": {
+          "type": "string",
+          "x-example": "Specific"
+        }
+      }
+    },
+    "StartJobs": {
+      "description": "Model for StartJobs",
+      "required": [
+        "startInfo"
+      ],
+      "properties": {
+        "startInfo": {
+          "$ref": "#/definitions/StartInfo",
+          "x-example": "{\n  \"ReleaseKey\": \"ebc46c63-042c-4c88-bc86-7462b68970e6\",\n  \"RobotIds\": [\n    6579\n  ],\n  \"NoOfRobots\": 0,\n  \"Strategy\": \"Specific\"\n}"
+        }
+      }
+    },
+    "QueueItemResponse": {
+      "description": "Model for QueueItemResponse",
+      "required": [
+        "AncestorId"
+      ],
+      "properties": {
+        "AncestorId": {
+          "type": "string",
+          "x-example": ""
+        },
+        "CreationTime": {
+          "type": "string",
+          "format": "date-time",
+          "x-example": "2017-11-03T17:47:35.8964334Z"
+        },
+        "DeferDate": {
+          "type": "string",
+          "x-example": ""
+        },
+        "DueDate": {
+          "type": "string",
+          "x-example": ""
+        },
+        "EndProcessing": {
+          "type": "string",
+          "x-example": ""
+        },
+        "Id": {
+          "type": "integer",
+          "format": "int32",
+          "x-example": "1828715"
+        },
+        "Key": {
+          "type": "string",
+          "x-example": "5fbaca10-2e9b-4d1f-8f55-82afee493559"
+        },
+        "Output": {
+          "type": "string",
+          "x-example": ""
+        },
+        "OutputData": {
+          "type": "string",
+          "x-example": ""
+        },
+        "Priority": {
+          "type": "string",
+          "x-example": "Low"
+        },
+        "ProcessingExceptionId": {
+          "type": "string",
+          "x-example": ""
+        },
+        "ProcessingExceptionType": {
+          "type": "string",
+          "x-example": ""
+        },
+        "Progress": {
+          "type": "string",
+          "x-example": ""
+        },
+        "QueueDefinitionId": {
+          "type": "integer",
+          "format": "int32",
+          "x-example": "1917"
+        },
+        "Reference": {
+          "type": "string",
+          "x-example": ""
+        },
+        "RetryNumber": {
+          "type": "integer",
+          "format": "int32",
+          "x-example": "0"
+        },
+        "ReviewStatus": {
+          "type": "string",
+          "x-example": "None"
+        },
+        "RowVersion": {
+          "type": "string",
+          "x-example": "AAAAAABUhhI="
+        },
+        "SecondsInPreviousAttempts": {
+          "type": "integer",
+          "format": "int32",
+          "x-example": "0"
+        },
+        "SpecificContent": {
+          "$ref": "#/definitions/SpecificContent",
+          "x-example": "{\n  \"myTestValue\": \"Test at 3:35 PM\"\n}"
+        },
+        "SpecificData": {
+          "type": "string",
+          "x-example": "{\"DynamicProperties\":{\"myTestValue\":\"Test at 3:35 PM\"}}"
+        },
+        "StartProcessing": {
+          "type": "string",
+          "x-example": ""
+        },
+        "Status": {
+          "type": "string",
+          "x-example": "New"
+        }
+      }
+    },
+    "SpecificContent": {
+      "description": "Model for SpecificContent",
+      "required": [
+        "myTestValue"
+      ],
+      "properties": {
+        "myTestValue": {
+          "type": "string",
+          "x-example": "Test at 3:35 PM"
+        },
+        "InputValue1": {
+          "type": "string",
+          "x-example": "Test Input Value"
+        },
+        "InputValue2": {
+          "type": "string",
+          "x-example": "Test Input Value"
+        },
+        "SerialNumber": {
+          "type": "string",
+          "x-example": "00_00"
+        }
+      }
+    },
+    "ItemData": {
+      "description": "Model for ItemData",
+      "required": [
+        "DeferDate"
+      ],
+      "properties": {
+        "DeferDate": {
+          "type": "string",
+          "x-example": ""
+        },
+        "DueDate": {
+          "type": "string",
+          "x-example": ""
+        },
+        "Name": {
+          "type": "string",
+          "x-example": "K2"
+        },
+        "Priority": {
+          "type": "string",
+          "x-example": "Low"
+        },
+        "SpecificContent": {
+          "$ref": "#/definitions/SpecificContent",
+          "x-example": "{\n  \"myTestValue\": \"Test at 3:35 PM\"\n}"
+        }
+      }
+    },
+    "QueueItem": {
+      "description": "Model for QueueItem",
+      "required": [
+        "itemData"
+      ],
+      "properties": {
+        "itemData": {
+          "$ref": "#/definitions/ItemData",
+          "x-example": "{\r\n  \"Name\": \"K2\",\r\n  \"Priority\": \"Low\",\r\n  \"SpecificContent\": {\r\n    \"myTestValue\": \"Test at 3:35 PM\"\r\n  },\r\n  \"DeferDate\": null,\r\n  \"DueDate\": null\r\n}"
+        }
+      }
+    }
+  },
+  "securityDefinitions": {},
+  "security": [],
+  "tags": [
+    {
+      "name": "Odata",
+      "description": "Operations about Odata"
+    }
+  ]
+}
