@@ -1,0 +1,1107 @@
+{
+	"swagger": "2.0",
+	"info": {
+		"title": "Dynamics365",
+		"description": "API for trial-jjl7u0.sandbox.operations.dynamics.com",
+		"version": "0.0.0"
+	},
+	"host": "trial-jjl7u0.sandbox.operations.dynamics.com",
+	"basePath": "/data",
+	"schemes": ["https"],
+	"paths": {
+		"/Customers": {
+			"get": {
+				"tags": ["Customers"],
+				"summary": "Get All Customers",
+				"description": "Customers",
+				"operationId": "Customers",
+				"produces": ["application/json"],
+				"parameters": [{
+						"name": "Authorization",
+						"in": "header",
+						"description": "Authorization",
+						"required": true,
+						"type": "string",
+						"x-example": ""
+					}, {
+						"name": "Accept",
+						"in": "header",
+						"description": "Accept",
+						"required": false,
+						"default": "application/json",
+						"type": "string",
+						"x-example": ""
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "All Customers",
+						"schema": {
+							"$ref": "#/definitions/Get"
+						}
+					}
+				},
+				"security": []
+			}
+		}
+	},
+	"definitions": {
+		"Get": {
+			"description": "Model for Get",
+			"required": ["value"],
+			"properties": {
+				"value": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/Value"
+					},
+					"x-example": "[\r\n  {\r\n    \"@odata.etag\": \"W/\\\"JzEsNjg3MTk0ODUyOTQ7MCwwOzEsNjg3MTk0ODUwNzk7MSw2ODcxOTQ4MzczOTs2NTc1ODA4ODQsNjg3MTk1MTg3NTM7MSw2ODcxOTUyMjk2NDswLDA7MCwwOzEsNjg3MTk1MjI5NjU7MCwwJw==\\\"\",\r\n    \"dataAreaId\": \"dat\",\r\n    \"CustomerAccount\": \"Williams Enterprises\",\r\n    \"AddressBrazilianCNPJOrCPF\": \"\",\r\n    \"PartyType\": \"Person\",\r\n    \"PrimaryContactFaxExtension\": \"\",\r\n    \"IsFuelSurchargeApplied\": \"No\",\r\n    \"SalesTaxGroup\": \"\",\r\n    \"AddressCountryRegionId\": \"USA\",\r\n    \"ContactPersonId\": \"\",\r\n    \"CustomerPaymentFineCode\": \"\",\r\n    \"BirthCountyCode\": \"\",\r\n    \"InvoiceAddress\": \"InvoiceAccount\",\r\n    \"PackingMaterialFeeLicenseNumber\": \"\",\r\n    \"TransactionPresenceType\": \"DoesNotApply\",\r\n    \"PrimaryContactEmailIsIM\": \"No\",\r\n    \"PrimaryContactTwitter\": \"\",\r\n    \"InvoiceAddressCity\": \"\",\r\n    \"IsFinalUser\": \"No\",\r\n    \"PrimaryContactEmail\": \"nick.williams@fcamdev.onmicrosoft.com\",\r\n    \"DeliveryAddressCounty\": \"\",\r\n    \"HasSuframaDiscountPISandCOFINS\": \"No\",\r\n    \"InvoiceAddressStreet\": \"\",\r\n    \"CURPNumber\": \"\",\r\n    \"PrimaryContactLinkedInDescription\": \"\",\r\n    \"Name\": \"Nick James Williams\",\r\n    \"DeliveryAddressCountryRegionId\": \"\",\r\n    \"ItemCustomerGroupId\": \"\",\r\n    \"PersonProfessionalTitle\": \"\",\r\n    \"SalesSegmentId\": \"\",\r\n    \"IsServiceDeliveryAddressBased\": \"No\",\r\n    \"PrimaryContactTelexDescription\": \"\",\r\n    \"InvoiceAddressDistrictName\": \"\",\r\n    \"InvoiceAddressTimeZone\": null,\r\n    \"SalesAccountNumber\": \"\",\r\n    \"PrimaryContactPhoneIsMobile\": \"No\",\r\n    \"PrimaryContactFacebookDescription\": \"\",\r\n    \"TCSGroup\": \"\",\r\n    \"DeliveryAddressLocationId\": \"\",\r\n    \"AddressZipCode\": \"10001\",\r\n    \"GiroTypeProjInvoice\": \"None\",\r\n    \"LineOfBusinessId\": \"\",\r\n    \"OrganizationPhoneticName\": \"\",\r\n    \"DeliveryAddressCountryRegionISOCode\": \"\",\r\n    \"CreditCardCVC\": \"None\",\r\n    \"DeliveryAddressValidFrom\": \"1900-01-01T00:00:00Z\",\r\n    \"GiroTypeAccountStatement\": \"None\",\r\n    \"CalculateWithholdingTax\": \"No\",\r\n    \"IsRFIDPalletTaggingEnabled\": \"No\",\r\n    \"ElectronicInvoiceEAN\": \"\",\r\n    \"DeliveryFreightZone\": \"\",\r\n    \"PrimaryContactFax\": \"\",\r\n    \"TaxExemptNumber\": \"\",\r\n    \"DeliveryAddressDescription\": \"\",\r\n    \"DeliveryAddressLongitude\": 0,\r\n    \"BirthPlace\": \"\",\r\n    \"AddressCity\": \"New York\",\r\n    \"PersonInitials\": \"\",\r\n    \"CentralBankPurposeCode\": \"\",\r\n    \"GiroTypeCollectionletter\": \"None\",\r\n    \"FullPrimaryAddress\": \"Test Street\\nNew York, NY 10001\\nUSA\",\r\n    \"OrderEntryDeadline\": \"\",\r\n    \"ForeignerId\": \"\",\r\n    \"WarehouseIsASNGenerated\": \"No\",\r\n    \"AddressLongitude\": 0,\r\n    \"PrimaryContactLinkedIn\": \"\",\r\n    \"PrimaryContactURL\": \"\",\r\n    \"IsFreightAccrued\": \"No\",\r\n    \"PartyState\": \"\",\r\n    \"InvoiceAccount\": \"\",\r\n    \"PartyNumber\": \"000002459\",\r\n    \"WarehouseFulfillmentRate\": 0,\r\n    \"CentralBankPurposeNotes\": \"\",\r\n    \"PersonMaritalStatus\": \"None\",\r\n    \"CollectionsContactPersonId\": \"\",\r\n    \"AddressLocationId\": \"000003800\",\r\n    \"PaymentSchedule\": \"\",\r\n    \"PrimaryContactTwitterPurpose\": \"\",\r\n    \"GiroType\": \"None\",\r\n    \"InvoiceAddressDescription\": \"\",\r\n    \"AddressDistrictName\": \"\",\r\n    \"DeliveryTerms\": \"\",\r\n    \"NumberSequenceGroup\": \"\",\r\n    \"PersonChildrenNames\": \"\",\r\n    \"PaymentMethod\": \"\",\r\n    \"DeliveryMode\": \"\",\r\n    \"PersonProfessionalSuffix\": \"\",\r\n    \"OnHoldStatus\": \"No\",\r\n    \"WarehouseFulfillmentType\": \"None\",\r\n    \"AccountStatement\": \"Always\",\r\n    \"WarehouseId\": \"\",\r\n    \"DestinationCode\": \"\",\r\n    \"IRS1099CIndicator\": \"No\",\r\n    \"FrenchSiret\": \"\",\r\n    \"PaymentDay\": \"\",\r\n    \"BrazilianNIT\": \"\",\r\n    \"FederalIndicator\": \"None\",\r\n    \"EmployeeResponsibleNumber\": \"\",\r\n    \"PersonAnniversaryYear\": 0,\r\n    \"DefaultInventoryStatusId\": \"\",\r\n    \"PrimaryContactEmailDescription\": \"\",\r\n    \"AddressTimeZone\": null,\r\n    \"PrimaryContactPhone\": \"+16475220246\",\r\n    \"DeliveryAddressCity\": \"\",\r\n    \"InvoiceAddressCounty\": \"\",\r\n    \"PANReferenceNumber\": \"\",\r\n    \"DeliveryAddressStreet\": \"\",\r\n    \"SalesCurrencyCode\": \"USD\",\r\n    \"IsSalesTaxIncludedInPrices\": \"No\",\r\n    \"BrazilianCNPJOrCPF\": \"\",\r\n    \"PaymentFactoringAccount\": \"\",\r\n    \"PANNumber\": \"\",\r\n    \"PrimaryContactTwitterDescription\": \"\",\r\n    \"BrazilianCCM\": \"\",\r\n    \"ReceiptEmail\": \"\",\r\n    \"TDSGroup\": \"\",\r\n    \"MultiLineDiscountCode\": \"\",\r\n    \"PersonAnniversaryDay\": 0,\r\n    \"DefaultDimensionDisplayValue\": \"\",\r\n    \"SupplementaryItemGroupId\": \"\",\r\n    \"IsWithholdingTaxCalculated\": \"No\",\r\n    \"PaymentSpecification\": \"\",\r\n    \"AddressBooks\": \"\",\r\n    \"PrimaryContactEmailPurpose\": \"Business\",\r\n    \"SalesDistrict\": \"\",\r\n    \"ConsolidationDay\": 0,\r\n    \"IsExpressBillOfLadingAccepted\": \"No\",\r\n    \"CreditCardAddressVerification\": \"None\",\r\n    \"AddressState\": \"NY\",\r\n    \"IsExcludedFromCollectionFeeCalculation\": \"No\",\r\n    \"CustomerPaymentFinancialInterestCode\": \"\",\r\n    \"IsTransactionPostedAsShipment\": \"No\",\r\n    \"CreditLimitIsMandatory\": \"No\",\r\n    \"IsExternallyMaintained\": \"No\",\r\n    \"PaymentTermsBaseDays\": 0,\r\n    \"FiscalCode\": \"\",\r\n    \"KnownAs\": \"\",\r\n    \"PrimaryContactTelex\": \"\",\r\n    \"PaymentBankAccount\": \"\",\r\n    \"BrazilianIE\": \"\",\r\n    \"PreferentialCustomer\": \"No\",\r\n    \"ReceiptOption\": \"RetailEx3\",\r\n    \"FulfillmentErrorTolerance\": \"UseCompanyPolicy\",\r\n    \"AddressBrazilianIE\": \"\",\r\n    \"PersonAnniversaryMonth\": \"None\",\r\n    \"PrimaryContactPhoneExtension\": \"\",\r\n    \"PrimaryContactPhonePurpose\": \"Business\",\r\n    \"ExportSale\": \"No\",\r\n    \"OrganizationNumber\": \"\",\r\n    \"CreditCardAddressVerificationIsAuthorizationVoidedOnFailure\": \"No\",\r\n    \"InvoiceAddressState\": \"\",\r\n    \"ReceiptCalendar\": \"\",\r\n    \"DeliveryAddressState\": \"\",\r\n    \"StateInscription\": \"\",\r\n    \"SalesReturnTaxGroup\": \"\",\r\n    \"PrimaryContactURLDescription\": \"\",\r\n    \"CustomerWithholdingContributionType\": \"Other\",\r\n    \"IsElectronicInvoice\": \"No\",\r\n    \"FederalAgencyLocationCode\": \"\",\r\n    \"GiroTypeFreeTextInvoice\": \"None\",\r\n    \"DeliveryAddressValidTo\": \"1900-01-01T00:00:00Z\",\r\n    \"PersonPhoneticMiddleName\": \"\",\r\n    \"OrganizationABCCode\": \"None\",\r\n    \"BrazilianCNAE\": \"\",\r\n    \"WithholdingTaxGroupCode\": \"\",\r\n    \"NAFCode\": \"\",\r\n    \"AddressLatitude\": 0,\r\n    \"TotalDiscountCode\": \"\",\r\n    \"AddressLocationRoles\": \"Business\",\r\n    \"PaymentCashDiscount\": \"\",\r\n    \"DeliveryAddressDistrictName\": \"\",\r\n    \"CreditRating\": \"\",\r\n    \"PrimaryContactFacebook\": \"\",\r\n    \"InvoiceAddressLongitude\": 0,\r\n    \"LineDiscountCode\": \"\",\r\n    \"PartyCountry\": \"\",\r\n    \"InvoiceAddressLatitude\": 0,\r\n    \"IsInSuframaRegion\": \"No\",\r\n    \"IsIncomingFiscalDocumentGenerated\": \"No\",\r\n    \"SalesMemo\": \"\",\r\n    \"ReliefGroupId\": \"\",\r\n    \"IsExcludedFromInterestChargeCalculation\": \"No\",\r\n    \"StatisticsGroupId\": \"\",\r\n    \"SalesOrderPoolId\": \"\",\r\n    \"IsOrderNumberReferenceUsed\": \"No\",\r\n    \"AddressValidTo\": \"2154-12-31T23:59:59Z\",\r\n    \"FederalComments\": \"\",\r\n    \"PersonGender\": \"Male\",\r\n    \"PaymentTerms\": \"\",\r\n    \"PrimaryContactPhoneDescription\": \"\",\r\n    \"SalesSubsegmentId\": \"\",\r\n    \"CustomerRebateGroupId\": \"\",\r\n    \"AddressCounty\": \"NEW YORK\",\r\n    \"IsRFIDCaseTaggingEnabled\": \"No\",\r\n    \"EnterpriseNumber\": \"\",\r\n    \"IsICMSContributor\": \"No\",\r\n    \"InvoiceAddressValidTo\": \"2154-12-31T23:59:59Z\",\r\n    \"DeliveryAddressTimeZone\": null,\r\n    \"InvoiceAddressValidFrom\": \"2020-12-29T17:09:30Z\",\r\n    \"CreditLimit\": 0,\r\n    \"CreditCardAddressVerificationLevel\": \"Accept\",\r\n    \"WarehouseIsEntireShipmentFilled\": \"No\",\r\n    \"PackingDutyLicense\": \"\",\r\n    \"NationalRegistryNumber\": \"\",\r\n    \"SiteId\": \"\",\r\n    \"InvoiceAddressCountryRegionISOCode\": \"US\",\r\n    \"PrimaryContactURLPurpose\": \"\",\r\n    \"ChargesGroupId\": \"\",\r\n    \"PanStatus\": \"NotAvailable\",\r\n    \"CommissionSalesGroupId\": \"\",\r\n    \"NameAlias\": \"Nick James Williams\",\r\n    \"PrimaryContactFaxPurpose\": \"\",\r\n    \"PaymentIdType\": \"\",\r\n    \"VendorAccount\": \"\",\r\n    \"AddressCountryRegionISOCode\": \"US\",\r\n    \"ResidenceForeignCountryRegionId\": \"\",\r\n    \"RFCNumber\": \"\",\r\n    \"PersonHobbies\": \"\",\r\n    \"ElectronicLocationId\": \"000003802\",\r\n    \"PrimaryContactLinkedInPurpose\": \"\",\r\n    \"InvoiceAddressZipCode\": \"10002\",\r\n    \"IsOneTimeCustomer\": \"No\",\r\n    \"ForeignCustomer\": \"No\",\r\n    \"CustomerTMAGroupId\": \"\",\r\n    \"AddressValidFrom\": \"2020-12-29T15:43:07Z\",\r\n    \"OrganizationNumberOfEmployees\": 0,\r\n    \"CompanyType\": \"Blank\",\r\n    \"IsRFIDItemTaggingEnabled\": \"No\",\r\n    \"CustomerGroupId\": \"TestGroup\",\r\n    \"GiroTypeInterestNote\": \"None\",\r\n    \"DeliveryAddressZipCode\": \"\",\r\n    \"DeliveryReason\": \"\",\r\n    \"TaxRegistrationId\": \"\",\r\n    \"PaymentUseCashDiscount\": \"Normal\",\r\n    \"DiscountPriceGroupId\": \"\",\r\n    \"AddressDescription\": \"Nick James Williams\",\r\n    \"SuframaNumber\": \"\",\r\n    \"IdentificationNumber\": \"\",\r\n    \"PersonPhoneticFirstName\": \"\",\r\n    \"PrimaryContactTelexPurpose\": \"\",\r\n    \"DeliveryAddressLatitude\": 0,\r\n    \"InvoiceAddressCountryRegionId\": \"USA\",\r\n    \"PrimaryContactFacebookPurpose\": \"\",\r\n    \"CompanyChain\": \"\",\r\n    \"BrazilianINSSCEI\": \"\",\r\n    \"CommissionCustomerGroupId\": \"\",\r\n    \"PrimaryContactFaxDescription\": \"\",\r\n    \"NatureOfAssessee\": \"Company\",\r\n    \"WriteoffReason\": \"\",\r\n    \"InvoiceAddressLocationId\": \"000003803\",\r\n    \"PersonPhoneticLastName\": \"\",\r\n    \"LanguageId\": \"en-us\",\r\n    \"AddressStreet\": \"Test Street\",\r\n    \"IsPurchRequestUsed\": \"No\"\r\n  },\r\n  {\r\n    \"@odata.etag\": \"W/\\\"JzEsNjg3MTk0ODUzMDA7MCwwOzAsMDswLDA7MSw2ODcxOTUxODc1NjswLDA7MCwwOzAsMDswLDA7MCwwJw==\\\"\",\r\n    \"dataAreaId\": \"dat\",\r\n    \"CustomerAccount\": \"CA00000016\",\r\n    \"AddressBrazilianCNPJOrCPF\": \"\",\r\n    \"PartyType\": \"Organization\",\r\n    \"PrimaryContactFaxExtension\": \"\",\r\n    \"IsFuelSurchargeApplied\": \"No\",\r\n    \"SalesTaxGroup\": \"\",\r\n    \"AddressCountryRegionId\": \"\",\r\n    \"ContactPersonId\": \"\",\r\n    \"CustomerPaymentFineCode\": \"\",\r\n    \"BirthCountyCode\": \"\",\r\n    \"InvoiceAddress\": \"InvoiceAccount\",\r\n    \"PackingMaterialFeeLicenseNumber\": \"\",\r\n    \"TransactionPresenceType\": \"DoesNotApply\",\r\n    \"PrimaryContactEmailIsIM\": \"No\",\r\n    \"PrimaryContactTwitter\": \"\",\r\n    \"InvoiceAddressCity\": \"\",\r\n    \"IsFinalUser\": \"No\",\r\n    \"PrimaryContactEmail\": \"\",\r\n    \"DeliveryAddressCounty\": \"\",\r\n    \"HasSuframaDiscountPISandCOFINS\": \"No\",\r\n    \"InvoiceAddressStreet\": \"\",\r\n    \"CURPNumber\": \"\",\r\n    \"PrimaryContactLinkedInDescription\": \"\",\r\n    \"Name\": \"Nick Williams\",\r\n    \"DeliveryAddressCountryRegionId\": \"\",\r\n    \"ItemCustomerGroupId\": \"\",\r\n    \"PersonProfessionalTitle\": \"\",\r\n    \"SalesSegmentId\": \"\",\r\n    \"IsServiceDeliveryAddressBased\": \"No\",\r\n    \"PrimaryContactTelexDescription\": \"\",\r\n    \"InvoiceAddressDistrictName\": \"\",\r\n    \"InvoiceAddressTimeZone\": null,\r\n    \"SalesAccountNumber\": \"\",\r\n    \"PrimaryContactPhoneIsMobile\": \"No\",\r\n    \"PrimaryContactFacebookDescription\": \"\",\r\n    \"TCSGroup\": \"\",\r\n    \"DeliveryAddressLocationId\": \"\",\r\n    \"AddressZipCode\": \"\",\r\n    \"GiroTypeProjInvoice\": \"None\",\r\n    \"LineOfBusinessId\": \"\",\r\n    \"OrganizationPhoneticName\": \"\",\r\n    \"DeliveryAddressCountryRegionISOCode\": \"\",\r\n    \"CreditCardCVC\": \"None\",\r\n    \"DeliveryAddressValidFrom\": \"1900-01-01T00:00:00Z\",\r\n    \"GiroTypeAccountStatement\": \"None\",\r\n    \"CalculateWithholdingTax\": \"No\",\r\n    \"IsRFIDPalletTaggingEnabled\": \"No\",\r\n    \"ElectronicInvoiceEAN\": \"\",\r\n    \"DeliveryFreightZone\": \"\",\r\n    \"PrimaryContactFax\": \"\",\r\n    \"TaxExemptNumber\": \"\",\r\n    \"DeliveryAddressDescription\": \"\",\r\n    \"DeliveryAddressLongitude\": 0,\r\n    \"BirthPlace\": \"\",\r\n    \"AddressCity\": \"\",\r\n    \"PersonInitials\": \"\",\r\n    \"CentralBankPurposeCode\": \"\",\r\n    \"GiroTypeCollectionletter\": \"None\",\r\n    \"FullPrimaryAddress\": \"\",\r\n    \"OrderEntryDeadline\": \"\",\r\n    \"ForeignerId\": \"\",\r\n    \"WarehouseIsASNGenerated\": \"No\",\r\n    \"AddressLongitude\": 0,\r\n    \"PrimaryContactLinkedIn\": \"\",\r\n    \"PrimaryContactURL\": \"\",\r\n    \"IsFreightAccrued\": \"No\",\r\n    \"PartyState\": \"\",\r\n    \"InvoiceAccount\": \"\",\r\n    \"PartyNumber\": \"000002462\",\r\n    \"WarehouseFulfillmentRate\": 0,\r\n    \"CentralBankPurposeNotes\": \"\",\r\n    \"PersonMaritalStatus\": \"None\",\r\n    \"CollectionsContactPersonId\": \"\",\r\n    \"AddressLocationId\": \"\",\r\n    \"PaymentSchedule\": \"\",\r\n    \"PrimaryContactTwitterPurpose\": \"\",\r\n    \"GiroType\": \"None\",\r\n    \"InvoiceAddressDescription\": \"\",\r\n    \"AddressDistrictName\": \"\",\r\n    \"DeliveryTerms\": \"\",\r\n    \"NumberSequenceGroup\": \"\",\r\n    \"PersonChildrenNames\": \"\",\r\n    \"PaymentMethod\": \"\",\r\n    \"DeliveryMode\": \"\",\r\n    \"PersonProfessionalSuffix\": \"\",\r\n    \"OnHoldStatus\": \"No\",\r\n    \"WarehouseFulfillmentType\": \"None\",\r\n    \"AccountStatement\": \"Always\",\r\n    \"WarehouseId\": \"\",\r\n    \"DestinationCode\": \"\",\r\n    \"IRS1099CIndicator\": \"No\",\r\n    \"FrenchSiret\": \"\",\r\n    \"PaymentDay\": \"\",\r\n    \"BrazilianNIT\": \"\",\r\n    \"FederalIndicator\": \"None\",\r\n    \"EmployeeResponsibleNumber\": \"\",\r\n    \"PersonAnniversaryYear\": 0,\r\n    \"DefaultInventoryStatusId\": \"\",\r\n    \"PrimaryContactEmailDescription\": \"\",\r\n    \"AddressTimeZone\": null,\r\n    \"PrimaryContactPhone\": \"\",\r\n    \"DeliveryAddressCity\": \"\",\r\n    \"InvoiceAddressCounty\": \"\",\r\n    \"PANReferenceNumber\": \"\",\r\n    \"DeliveryAddressStreet\": \"\",\r\n    \"SalesCurrencyCode\": \"USD\",\r\n    \"IsSalesTaxIncludedInPrices\": \"No\",\r\n    \"BrazilianCNPJOrCPF\": \"\",\r\n    \"PaymentFactoringAccount\": \"\",\r\n    \"PANNumber\": \"\",\r\n    \"PrimaryContactTwitterDescription\": \"\",\r\n    \"BrazilianCCM\": \"\",\r\n    \"ReceiptEmail\": \"\",\r\n    \"TDSGroup\": \"\",\r\n    \"MultiLineDiscountCode\": \"\",\r\n    \"PersonAnniversaryDay\": 0,\r\n    \"DefaultDimensionDisplayValue\": \"\",\r\n    \"SupplementaryItemGroupId\": \"\",\r\n    \"IsWithholdingTaxCalculated\": \"No\",\r\n    \"PaymentSpecification\": \"\",\r\n    \"AddressBooks\": \"\",\r\n    \"PrimaryContactEmailPurpose\": \"\",\r\n    \"SalesDistrict\": \"\",\r\n    \"ConsolidationDay\": 0,\r\n    \"IsExpressBillOfLadingAccepted\": \"No\",\r\n    \"CreditCardAddressVerification\": \"None\",\r\n    \"AddressState\": \"\",\r\n    \"IsExcludedFromCollectionFeeCalculation\": \"No\",\r\n    \"CustomerPaymentFinancialInterestCode\": \"\",\r\n    \"IsTransactionPostedAsShipment\": \"No\",\r\n    \"CreditLimitIsMandatory\": \"No\",\r\n    \"IsExternallyMaintained\": \"No\",\r\n    \"PaymentTermsBaseDays\": 0,\r\n    \"FiscalCode\": \"\",\r\n    \"KnownAs\": \"\",\r\n    \"PrimaryContactTelex\": \"\",\r\n    \"PaymentBankAccount\": \"\",\r\n    \"BrazilianIE\": \"\",\r\n    \"PreferentialCustomer\": \"No\",\r\n    \"ReceiptOption\": \"RetailEx3\",\r\n    \"FulfillmentErrorTolerance\": \"UseCompanyPolicy\",\r\n    \"AddressBrazilianIE\": \"\",\r\n    \"PersonAnniversaryMonth\": \"None\",\r\n    \"PrimaryContactPhoneExtension\": \"\",\r\n    \"PrimaryContactPhonePurpose\": \"\",\r\n    \"ExportSale\": \"No\",\r\n    \"OrganizationNumber\": \"\",\r\n    \"CreditCardAddressVerificationIsAuthorizationVoidedOnFailure\": \"No\",\r\n    \"InvoiceAddressState\": \"\",\r\n    \"ReceiptCalendar\": \"\",\r\n    \"DeliveryAddressState\": \"\",\r\n    \"StateInscription\": \"\",\r\n    \"SalesReturnTaxGroup\": \"\",\r\n    \"PrimaryContactURLDescription\": \"\",\r\n    \"CustomerWithholdingContributionType\": \"Other\",\r\n    \"IsElectronicInvoice\": \"No\",\r\n    \"FederalAgencyLocationCode\": \"\",\r\n    \"GiroTypeFreeTextInvoice\": \"None\",\r\n    \"DeliveryAddressValidTo\": \"1900-01-01T00:00:00Z\",\r\n    \"PersonPhoneticMiddleName\": \"\",\r\n    \"OrganizationABCCode\": \"None\",\r\n    \"BrazilianCNAE\": \"\",\r\n    \"WithholdingTaxGroupCode\": \"\",\r\n    \"NAFCode\": \"\",\r\n    \"AddressLatitude\": 0,\r\n    \"TotalDiscountCode\": \"\",\r\n    \"AddressLocationRoles\": \"\",\r\n    \"PaymentCashDiscount\": \"\",\r\n    \"DeliveryAddressDistrictName\": \"\",\r\n    \"CreditRating\": \"\",\r\n    \"PrimaryContactFacebook\": \"\",\r\n    \"InvoiceAddressLongitude\": 0,\r\n    \"LineDiscountCode\": \"\",\r\n    \"PartyCountry\": \"\",\r\n    \"InvoiceAddressLatitude\": 0,\r\n    \"IsInSuframaRegion\": \"No\",\r\n    \"IsIncomingFiscalDocumentGenerated\": \"No\",\r\n    \"SalesMemo\": \"\",\r\n    \"ReliefGroupId\": \"\",\r\n    \"IsExcludedFromInterestChargeCalculation\": \"No\",\r\n    \"StatisticsGroupId\": \"\",\r\n    \"SalesOrderPoolId\": \"\",\r\n    \"IsOrderNumberReferenceUsed\": \"No\",\r\n    \"AddressValidTo\": \"1900-01-01T00:00:00Z\",\r\n    \"FederalComments\": \"\",\r\n    \"PersonGender\": \"Unknown\",\r\n    \"PaymentTerms\": \"\",\r\n    \"PrimaryContactPhoneDescription\": \"\",\r\n    \"SalesSubsegmentId\": \"\",\r\n    \"CustomerRebateGroupId\": \"\",\r\n    \"AddressCounty\": \"\",\r\n    \"IsRFIDCaseTaggingEnabled\": \"No\",\r\n    \"EnterpriseNumber\": \"\",\r\n    \"IsICMSContributor\": \"No\",\r\n    \"InvoiceAddressValidTo\": \"1900-01-01T00:00:00Z\",\r\n    \"DeliveryAddressTimeZone\": null,\r\n    \"InvoiceAddressValidFrom\": \"1900-01-01T00:00:00Z\",\r\n    \"CreditLimit\": 0,\r\n    \"CreditCardAddressVerificationLevel\": \"Accept\",\r\n    \"WarehouseIsEntireShipmentFilled\": \"No\",\r\n    \"PackingDutyLicense\": \"\",\r\n    \"NationalRegistryNumber\": \"\",\r\n    \"SiteId\": \"\",\r\n    \"InvoiceAddressCountryRegionISOCode\": \"\",\r\n    \"PrimaryContactURLPurpose\": \"\",\r\n    \"ChargesGroupId\": \"\",\r\n    \"PanStatus\": \"NotAvailable\",\r\n    \"CommissionSalesGroupId\": \"\",\r\n    \"NameAlias\": \"Nick Williams\",\r\n    \"PrimaryContactFaxPurpose\": \"\",\r\n    \"PaymentIdType\": \"\",\r\n    \"VendorAccount\": \"\",\r\n    \"AddressCountryRegionISOCode\": \"\",\r\n    \"ResidenceForeignCountryRegionId\": \"\",\r\n    \"RFCNumber\": \"\",\r\n    \"PersonHobbies\": \"\",\r\n    \"ElectronicLocationId\": \"\",\r\n    \"PrimaryContactLinkedInPurpose\": \"\",\r\n    \"InvoiceAddressZipCode\": \"\",\r\n    \"IsOneTimeCustomer\": \"No\",\r\n    \"ForeignCustomer\": \"No\",\r\n    \"CustomerTMAGroupId\": \"\",\r\n    \"AddressValidFrom\": \"1900-01-01T00:00:00Z\",\r\n    \"OrganizationNumberOfEmployees\": 0,\r\n    \"CompanyType\": \"Blank\",\r\n    \"IsRFIDItemTaggingEnabled\": \"No\",\r\n    \"CustomerGroupId\": \"TestGroup\",\r\n    \"GiroTypeInterestNote\": \"None\",\r\n    \"DeliveryAddressZipCode\": \"\",\r\n    \"DeliveryReason\": \"\",\r\n    \"TaxRegistrationId\": \"\",\r\n    \"PaymentUseCashDiscount\": \"Normal\",\r\n    \"DiscountPriceGroupId\": \"\",\r\n    \"AddressDescription\": \"\",\r\n    \"SuframaNumber\": \"\",\r\n    \"IdentificationNumber\": \"\",\r\n    \"PersonPhoneticFirstName\": \"\",\r\n    \"PrimaryContactTelexPurpose\": \"\",\r\n    \"DeliveryAddressLatitude\": 0,\r\n    \"InvoiceAddressCountryRegionId\": \"\",\r\n    \"PrimaryContactFacebookPurpose\": \"\",\r\n    \"CompanyChain\": \"\",\r\n    \"BrazilianINSSCEI\": \"\",\r\n    \"CommissionCustomerGroupId\": \"\",\r\n    \"PrimaryContactFaxDescription\": \"\",\r\n    \"NatureOfAssessee\": \"Company\",\r\n    \"WriteoffReason\": \"\",\r\n    \"InvoiceAddressLocationId\": \"\",\r\n    \"PersonPhoneticLastName\": \"\",\r\n    \"LanguageId\": \"en-us\",\r\n    \"AddressStreet\": \"\",\r\n    \"IsPurchRequestUsed\": \"No\"\r\n  }\r\n]"
+				}
+			}
+		},
+		"Value": {
+			"description": "Model for Value",
+			"required": ["AccountStatement"],
+			"properties": {
+				"AccountStatement": {
+					"type": "string",
+					"x-example": "Always"
+				},
+				"AddressBooks": {
+					"type": "string",
+					"x-example": ""
+				},
+				"AddressBrazilianCNPJOrCPF": {
+					"type": "string",
+					"x-example": ""
+				},
+				"AddressBrazilianIE": {
+					"type": "string",
+					"x-example": ""
+				},
+				"AddressCity": {
+					"type": "string",
+					"x-example": "New York"
+				},
+				"AddressCountryRegionId": {
+					"type": "string",
+					"x-example": "USA"
+				},
+				"AddressCountryRegionISOCode": {
+					"type": "string",
+					"x-example": "US"
+				},
+				"AddressCounty": {
+					"type": "string",
+					"x-example": "NEW YORK"
+				},
+				"AddressDescription": {
+					"type": "string",
+					"x-example": "Nick James Williams"
+				},
+				"AddressDistrictName": {
+					"type": "string",
+					"x-example": ""
+				},
+				"AddressLatitude": {
+					"type": "integer",
+					"format": "int32",
+					"x-example": "0"
+				},
+				"AddressLocationId": {
+					"type": "string",
+					"x-example": "000003800"
+				},
+				"AddressLocationRoles": {
+					"type": "string",
+					"x-example": "Business"
+				},
+				"AddressLongitude": {
+					"type": "integer",
+					"format": "int32",
+					"x-example": "0"
+				},
+				"AddressState": {
+					"type": "string",
+					"x-example": "NY"
+				},
+				"AddressStreet": {
+					"type": "string",
+					"x-example": "Test Street"
+				},
+				"AddressTimeZone": {
+					"type": "string",
+					"x-example": ""
+				},
+				"AddressValidFrom": {
+					"type": "string",
+					"format": "date-time",
+					"x-example": "2020-12-29T15:43:07Z"
+				},
+				"AddressValidTo": {
+					"type": "string",
+					"format": "date-time",
+					"x-example": "2154-12-31T23:59:59Z"
+				},
+				"AddressZipCode": {
+					"type": "string",
+					"x-example": "10001"
+				},
+				"BirthCountyCode": {
+					"type": "string",
+					"x-example": ""
+				},
+				"BirthPlace": {
+					"type": "string",
+					"x-example": ""
+				},
+				"BrazilianCCM": {
+					"type": "string",
+					"x-example": ""
+				},
+				"BrazilianCNAE": {
+					"type": "string",
+					"x-example": ""
+				},
+				"BrazilianCNPJOrCPF": {
+					"type": "string",
+					"x-example": ""
+				},
+				"BrazilianIE": {
+					"type": "string",
+					"x-example": ""
+				},
+				"BrazilianINSSCEI": {
+					"type": "string",
+					"x-example": ""
+				},
+				"BrazilianNIT": {
+					"type": "string",
+					"x-example": ""
+				},
+				"CalculateWithholdingTax": {
+					"type": "string",
+					"x-example": "No"
+				},
+				"CentralBankPurposeCode": {
+					"type": "string",
+					"x-example": ""
+				},
+				"CentralBankPurposeNotes": {
+					"type": "string",
+					"x-example": ""
+				},
+				"ChargesGroupId": {
+					"type": "string",
+					"x-example": ""
+				},
+				"CollectionsContactPersonId": {
+					"type": "string",
+					"x-example": ""
+				},
+				"CommissionCustomerGroupId": {
+					"type": "string",
+					"x-example": ""
+				},
+				"CommissionSalesGroupId": {
+					"type": "string",
+					"x-example": ""
+				},
+				"CompanyChain": {
+					"type": "string",
+					"x-example": ""
+				},
+				"CompanyType": {
+					"type": "string",
+					"x-example": "Blank"
+				},
+				"ConsolidationDay": {
+					"type": "integer",
+					"format": "int32",
+					"x-example": "0"
+				},
+				"ContactPersonId": {
+					"type": "string",
+					"x-example": ""
+				},
+				"CreditCardAddressVerification": {
+					"type": "string",
+					"x-example": "None"
+				},
+				"CreditCardAddressVerificationIsAuthorizationVoidedOnFailure": {
+					"type": "string",
+					"x-example": "No"
+				},
+				"CreditCardAddressVerificationLevel": {
+					"type": "string",
+					"x-example": "Accept"
+				},
+				"CreditCardCVC": {
+					"type": "string",
+					"x-example": "None"
+				},
+				"CreditLimit": {
+					"type": "integer",
+					"format": "int32",
+					"x-example": "0"
+				},
+				"CreditLimitIsMandatory": {
+					"type": "string",
+					"x-example": "No"
+				},
+				"CreditRating": {
+					"type": "string",
+					"x-example": ""
+				},
+				"CURPNumber": {
+					"type": "string",
+					"x-example": ""
+				},
+				"CustomerAccount": {
+					"type": "string",
+					"x-example": "Williams Enterprises"
+				},
+				"CustomerGroupId": {
+					"type": "string",
+					"x-example": "TestGroup"
+				},
+				"CustomerPaymentFinancialInterestCode": {
+					"type": "string",
+					"x-example": ""
+				},
+				"CustomerPaymentFineCode": {
+					"type": "string",
+					"x-example": ""
+				},
+				"CustomerRebateGroupId": {
+					"type": "string",
+					"x-example": ""
+				},
+				"CustomerTMAGroupId": {
+					"type": "string",
+					"x-example": ""
+				},
+				"CustomerWithholdingContributionType": {
+					"type": "string",
+					"x-example": "Other"
+				},
+				"dataAreaId": {
+					"type": "string",
+					"x-example": "dat"
+				},
+				"DefaultDimensionDisplayValue": {
+					"type": "string",
+					"x-example": ""
+				},
+				"DefaultInventoryStatusId": {
+					"type": "string",
+					"x-example": ""
+				},
+				"DeliveryAddressCity": {
+					"type": "string",
+					"x-example": ""
+				},
+				"DeliveryAddressCountryRegionId": {
+					"type": "string",
+					"x-example": ""
+				},
+				"DeliveryAddressCountryRegionISOCode": {
+					"type": "string",
+					"x-example": ""
+				},
+				"DeliveryAddressCounty": {
+					"type": "string",
+					"x-example": ""
+				},
+				"DeliveryAddressDescription": {
+					"type": "string",
+					"x-example": ""
+				},
+				"DeliveryAddressDistrictName": {
+					"type": "string",
+					"x-example": ""
+				},
+				"DeliveryAddressLatitude": {
+					"type": "integer",
+					"format": "int32",
+					"x-example": "0"
+				},
+				"DeliveryAddressLocationId": {
+					"type": "string",
+					"x-example": ""
+				},
+				"DeliveryAddressLongitude": {
+					"type": "integer",
+					"format": "int32",
+					"x-example": "0"
+				},
+				"DeliveryAddressState": {
+					"type": "string",
+					"x-example": ""
+				},
+				"DeliveryAddressStreet": {
+					"type": "string",
+					"x-example": ""
+				},
+				"DeliveryAddressTimeZone": {
+					"type": "string",
+					"x-example": ""
+				},
+				"DeliveryAddressValidFrom": {
+					"type": "string",
+					"format": "date-time",
+					"x-example": "1900-01-01T00:00:00Z"
+				},
+				"DeliveryAddressValidTo": {
+					"type": "string",
+					"format": "date-time",
+					"x-example": "1900-01-01T00:00:00Z"
+				},
+				"DeliveryAddressZipCode": {
+					"type": "string",
+					"x-example": ""
+				},
+				"DeliveryFreightZone": {
+					"type": "string",
+					"x-example": ""
+				},
+				"DeliveryMode": {
+					"type": "string",
+					"x-example": ""
+				},
+				"DeliveryReason": {
+					"type": "string",
+					"x-example": ""
+				},
+				"DeliveryTerms": {
+					"type": "string",
+					"x-example": ""
+				},
+				"DestinationCode": {
+					"type": "string",
+					"x-example": ""
+				},
+				"DiscountPriceGroupId": {
+					"type": "string",
+					"x-example": ""
+				},
+				"ElectronicInvoiceEAN": {
+					"type": "string",
+					"x-example": ""
+				},
+				"ElectronicLocationId": {
+					"type": "string",
+					"x-example": "000003802"
+				},
+				"EmployeeResponsibleNumber": {
+					"type": "string",
+					"x-example": ""
+				},
+				"EnterpriseNumber": {
+					"type": "string",
+					"x-example": ""
+				},
+				"ExportSale": {
+					"type": "string",
+					"x-example": "No"
+				},
+				"FederalAgencyLocationCode": {
+					"type": "string",
+					"x-example": ""
+				},
+				"FederalComments": {
+					"type": "string",
+					"x-example": ""
+				},
+				"FederalIndicator": {
+					"type": "string",
+					"x-example": "None"
+				},
+				"FiscalCode": {
+					"type": "string",
+					"x-example": ""
+				},
+				"ForeignCustomer": {
+					"type": "string",
+					"x-example": "No"
+				},
+				"ForeignerId": {
+					"type": "string",
+					"x-example": ""
+				},
+				"FrenchSiret": {
+					"type": "string",
+					"x-example": ""
+				},
+				"FulfillmentErrorTolerance": {
+					"type": "string",
+					"x-example": "UseCompanyPolicy"
+				},
+				"FullPrimaryAddress": {
+					"type": "string",
+					"x-example": "Test Street\nNew York, NY 10001\nUSA"
+				},
+				"GiroType": {
+					"type": "string",
+					"x-example": "None"
+				},
+				"GiroTypeAccountStatement": {
+					"type": "string",
+					"x-example": "None"
+				},
+				"GiroTypeCollectionletter": {
+					"type": "string",
+					"x-example": "None"
+				},
+				"GiroTypeFreeTextInvoice": {
+					"type": "string",
+					"x-example": "None"
+				},
+				"GiroTypeInterestNote": {
+					"type": "string",
+					"x-example": "None"
+				},
+				"GiroTypeProjInvoice": {
+					"type": "string",
+					"x-example": "None"
+				},
+				"HasSuframaDiscountPISandCOFINS": {
+					"type": "string",
+					"x-example": "No"
+				},
+				"IdentificationNumber": {
+					"type": "string",
+					"x-example": ""
+				},
+				"InvoiceAccount": {
+					"type": "string",
+					"x-example": ""
+				},
+				"InvoiceAddress": {
+					"type": "string",
+					"x-example": "InvoiceAccount"
+				},
+				"InvoiceAddressCity": {
+					"type": "string",
+					"x-example": ""
+				},
+				"InvoiceAddressCountryRegionId": {
+					"type": "string",
+					"x-example": "USA"
+				},
+				"InvoiceAddressCountryRegionISOCode": {
+					"type": "string",
+					"x-example": "US"
+				},
+				"InvoiceAddressCounty": {
+					"type": "string",
+					"x-example": ""
+				},
+				"InvoiceAddressDescription": {
+					"type": "string",
+					"x-example": ""
+				},
+				"InvoiceAddressDistrictName": {
+					"type": "string",
+					"x-example": ""
+				},
+				"InvoiceAddressLatitude": {
+					"type": "integer",
+					"format": "int32",
+					"x-example": "0"
+				},
+				"InvoiceAddressLocationId": {
+					"type": "string",
+					"x-example": "000003803"
+				},
+				"InvoiceAddressLongitude": {
+					"type": "integer",
+					"format": "int32",
+					"x-example": "0"
+				},
+				"InvoiceAddressState": {
+					"type": "string",
+					"x-example": ""
+				},
+				"InvoiceAddressStreet": {
+					"type": "string",
+					"x-example": ""
+				},
+				"InvoiceAddressTimeZone": {
+					"type": "string",
+					"x-example": ""
+				},
+				"InvoiceAddressValidFrom": {
+					"type": "string",
+					"format": "date-time",
+					"x-example": "2020-12-29T17:09:30Z"
+				},
+				"InvoiceAddressValidTo": {
+					"type": "string",
+					"format": "date-time",
+					"x-example": "2154-12-31T23:59:59Z"
+				},
+				"InvoiceAddressZipCode": {
+					"type": "string",
+					"x-example": "10002"
+				},
+				"IRS1099CIndicator": {
+					"type": "string",
+					"x-example": "No"
+				},
+				"IsElectronicInvoice": {
+					"type": "string",
+					"x-example": "No"
+				},
+				"IsExcludedFromCollectionFeeCalculation": {
+					"type": "string",
+					"x-example": "No"
+				},
+				"IsExcludedFromInterestChargeCalculation": {
+					"type": "string",
+					"x-example": "No"
+				},
+				"IsExpressBillOfLadingAccepted": {
+					"type": "string",
+					"x-example": "No"
+				},
+				"IsExternallyMaintained": {
+					"type": "string",
+					"x-example": "No"
+				},
+				"IsFinalUser": {
+					"type": "string",
+					"x-example": "No"
+				},
+				"IsFreightAccrued": {
+					"type": "string",
+					"x-example": "No"
+				},
+				"IsFuelSurchargeApplied": {
+					"type": "string",
+					"x-example": "No"
+				},
+				"IsICMSContributor": {
+					"type": "string",
+					"x-example": "No"
+				},
+				"IsIncomingFiscalDocumentGenerated": {
+					"type": "string",
+					"x-example": "No"
+				},
+				"IsInSuframaRegion": {
+					"type": "string",
+					"x-example": "No"
+				},
+				"IsOneTimeCustomer": {
+					"type": "string",
+					"x-example": "No"
+				},
+				"IsOrderNumberReferenceUsed": {
+					"type": "string",
+					"x-example": "No"
+				},
+				"IsPurchRequestUsed": {
+					"type": "string",
+					"x-example": "No"
+				},
+				"IsRFIDCaseTaggingEnabled": {
+					"type": "string",
+					"x-example": "No"
+				},
+				"IsRFIDItemTaggingEnabled": {
+					"type": "string",
+					"x-example": "No"
+				},
+				"IsRFIDPalletTaggingEnabled": {
+					"type": "string",
+					"x-example": "No"
+				},
+				"IsSalesTaxIncludedInPrices": {
+					"type": "string",
+					"x-example": "No"
+				},
+				"IsServiceDeliveryAddressBased": {
+					"type": "string",
+					"x-example": "No"
+				},
+				"IsTransactionPostedAsShipment": {
+					"type": "string",
+					"x-example": "No"
+				},
+				"IsWithholdingTaxCalculated": {
+					"type": "string",
+					"x-example": "No"
+				},
+				"ItemCustomerGroupId": {
+					"type": "string",
+					"x-example": ""
+				},
+				"KnownAs": {
+					"type": "string",
+					"x-example": ""
+				},
+				"LanguageId": {
+					"type": "string",
+					"x-example": "en-us"
+				},
+				"LineDiscountCode": {
+					"type": "string",
+					"x-example": ""
+				},
+				"LineOfBusinessId": {
+					"type": "string",
+					"x-example": ""
+				},
+				"MultiLineDiscountCode": {
+					"type": "string",
+					"x-example": ""
+				},
+				"NAFCode": {
+					"type": "string",
+					"x-example": ""
+				},
+				"Name": {
+					"type": "string",
+					"x-example": "Nick James Williams"
+				},
+				"NameAlias": {
+					"type": "string",
+					"x-example": "Nick James Williams"
+				},
+				"NationalRegistryNumber": {
+					"type": "string",
+					"x-example": ""
+				},
+				"NatureOfAssessee": {
+					"type": "string",
+					"x-example": "Company"
+				},
+				"NumberSequenceGroup": {
+					"type": "string",
+					"x-example": ""
+				},
+				"OnHoldStatus": {
+					"type": "string",
+					"x-example": "No"
+				},
+				"OrderEntryDeadline": {
+					"type": "string",
+					"x-example": ""
+				},
+				"OrganizationABCCode": {
+					"type": "string",
+					"x-example": "None"
+				},
+				"OrganizationNumber": {
+					"type": "string",
+					"x-example": ""
+				},
+				"OrganizationNumberOfEmployees": {
+					"type": "integer",
+					"format": "int32",
+					"x-example": "0"
+				},
+				"OrganizationPhoneticName": {
+					"type": "string",
+					"x-example": ""
+				},
+				"PackingDutyLicense": {
+					"type": "string",
+					"x-example": ""
+				},
+				"PackingMaterialFeeLicenseNumber": {
+					"type": "string",
+					"x-example": ""
+				},
+				"PANNumber": {
+					"type": "string",
+					"x-example": ""
+				},
+				"PANReferenceNumber": {
+					"type": "string",
+					"x-example": ""
+				},
+				"PanStatus": {
+					"type": "string",
+					"x-example": "NotAvailable"
+				},
+				"PartyCountry": {
+					"type": "string",
+					"x-example": ""
+				},
+				"PartyNumber": {
+					"type": "string",
+					"x-example": "000002459"
+				},
+				"PartyState": {
+					"type": "string",
+					"x-example": ""
+				},
+				"PartyType": {
+					"type": "string",
+					"x-example": "Person"
+				},
+				"PaymentBankAccount": {
+					"type": "string",
+					"x-example": ""
+				},
+				"PaymentCashDiscount": {
+					"type": "string",
+					"x-example": ""
+				},
+				"PaymentDay": {
+					"type": "string",
+					"x-example": ""
+				},
+				"PaymentFactoringAccount": {
+					"type": "string",
+					"x-example": ""
+				},
+				"PaymentIdType": {
+					"type": "string",
+					"x-example": ""
+				},
+				"PaymentMethod": {
+					"type": "string",
+					"x-example": ""
+				},
+				"PaymentSchedule": {
+					"type": "string",
+					"x-example": ""
+				},
+				"PaymentSpecification": {
+					"type": "string",
+					"x-example": ""
+				},
+				"PaymentTerms": {
+					"type": "string",
+					"x-example": ""
+				},
+				"PaymentTermsBaseDays": {
+					"type": "integer",
+					"format": "int32",
+					"x-example": "0"
+				},
+				"PaymentUseCashDiscount": {
+					"type": "string",
+					"x-example": "Normal"
+				},
+				"PersonAnniversaryDay": {
+					"type": "integer",
+					"format": "int32",
+					"x-example": "0"
+				},
+				"PersonAnniversaryMonth": {
+					"type": "string",
+					"x-example": "None"
+				},
+				"PersonAnniversaryYear": {
+					"type": "integer",
+					"format": "int32",
+					"x-example": "0"
+				},
+				"PersonChildrenNames": {
+					"type": "string",
+					"x-example": ""
+				},
+				"PersonGender": {
+					"type": "string",
+					"x-example": "Male"
+				},
+				"PersonHobbies": {
+					"type": "string",
+					"x-example": ""
+				},
+				"PersonInitials": {
+					"type": "string",
+					"x-example": ""
+				},
+				"PersonMaritalStatus": {
+					"type": "string",
+					"x-example": "None"
+				},
+				"PersonPhoneticFirstName": {
+					"type": "string",
+					"x-example": ""
+				},
+				"PersonPhoneticLastName": {
+					"type": "string",
+					"x-example": ""
+				},
+				"PersonPhoneticMiddleName": {
+					"type": "string",
+					"x-example": ""
+				},
+				"PersonProfessionalSuffix": {
+					"type": "string",
+					"x-example": ""
+				},
+				"PersonProfessionalTitle": {
+					"type": "string",
+					"x-example": ""
+				},
+				"PreferentialCustomer": {
+					"type": "string",
+					"x-example": "No"
+				},
+				"PrimaryContactEmail": {
+					"type": "string",
+					"x-example": "nick.williams@fcamdev.onmicrosoft.com"
+				},
+				"PrimaryContactEmailDescription": {
+					"type": "string",
+					"x-example": ""
+				},
+				"PrimaryContactEmailIsIM": {
+					"type": "string",
+					"x-example": "No"
+				},
+				"PrimaryContactEmailPurpose": {
+					"type": "string",
+					"x-example": "Business"
+				},
+				"PrimaryContactFacebook": {
+					"type": "string",
+					"x-example": ""
+				},
+				"PrimaryContactFacebookDescription": {
+					"type": "string",
+					"x-example": ""
+				},
+				"PrimaryContactFacebookPurpose": {
+					"type": "string",
+					"x-example": ""
+				},
+				"PrimaryContactFax": {
+					"type": "string",
+					"x-example": ""
+				},
+				"PrimaryContactFaxDescription": {
+					"type": "string",
+					"x-example": ""
+				},
+				"PrimaryContactFaxExtension": {
+					"type": "string",
+					"x-example": ""
+				},
+				"PrimaryContactFaxPurpose": {
+					"type": "string",
+					"x-example": ""
+				},
+				"PrimaryContactLinkedIn": {
+					"type": "string",
+					"x-example": ""
+				},
+				"PrimaryContactLinkedInDescription": {
+					"type": "string",
+					"x-example": ""
+				},
+				"PrimaryContactLinkedInPurpose": {
+					"type": "string",
+					"x-example": ""
+				},
+				"PrimaryContactPhone": {
+					"type": "string",
+					"x-example": "+16475220246"
+				},
+				"PrimaryContactPhoneDescription": {
+					"type": "string",
+					"x-example": ""
+				},
+				"PrimaryContactPhoneExtension": {
+					"type": "string",
+					"x-example": ""
+				},
+				"PrimaryContactPhoneIsMobile": {
+					"type": "string",
+					"x-example": "No"
+				},
+				"PrimaryContactPhonePurpose": {
+					"type": "string",
+					"x-example": "Business"
+				},
+				"PrimaryContactTelex": {
+					"type": "string",
+					"x-example": ""
+				},
+				"PrimaryContactTelexDescription": {
+					"type": "string",
+					"x-example": ""
+				},
+				"PrimaryContactTelexPurpose": {
+					"type": "string",
+					"x-example": ""
+				},
+				"PrimaryContactTwitter": {
+					"type": "string",
+					"x-example": ""
+				},
+				"PrimaryContactTwitterDescription": {
+					"type": "string",
+					"x-example": ""
+				},
+				"PrimaryContactTwitterPurpose": {
+					"type": "string",
+					"x-example": ""
+				},
+				"PrimaryContactURL": {
+					"type": "string",
+					"x-example": ""
+				},
+				"PrimaryContactURLDescription": {
+					"type": "string",
+					"x-example": ""
+				},
+				"PrimaryContactURLPurpose": {
+					"type": "string",
+					"x-example": ""
+				},
+				"ReceiptCalendar": {
+					"type": "string",
+					"x-example": ""
+				},
+				"ReceiptEmail": {
+					"type": "string",
+					"x-example": ""
+				},
+				"ReceiptOption": {
+					"type": "string",
+					"x-example": "RetailEx3"
+				},
+				"ReliefGroupId": {
+					"type": "string",
+					"x-example": ""
+				},
+				"ResidenceForeignCountryRegionId": {
+					"type": "string",
+					"x-example": ""
+				},
+				"RFCNumber": {
+					"type": "string",
+					"x-example": ""
+				},
+				"SalesAccountNumber": {
+					"type": "string",
+					"x-example": ""
+				},
+				"SalesCurrencyCode": {
+					"type": "string",
+					"x-example": "USD"
+				},
+				"SalesDistrict": {
+					"type": "string",
+					"x-example": ""
+				},
+				"SalesMemo": {
+					"type": "string",
+					"x-example": ""
+				},
+				"SalesOrderPoolId": {
+					"type": "string",
+					"x-example": ""
+				},
+				"SalesReturnTaxGroup": {
+					"type": "string",
+					"x-example": ""
+				},
+				"SalesSegmentId": {
+					"type": "string",
+					"x-example": ""
+				},
+				"SalesSubsegmentId": {
+					"type": "string",
+					"x-example": ""
+				},
+				"SalesTaxGroup": {
+					"type": "string",
+					"x-example": ""
+				},
+				"SiteId": {
+					"type": "string",
+					"x-example": ""
+				},
+				"StateInscription": {
+					"type": "string",
+					"x-example": ""
+				},
+				"StatisticsGroupId": {
+					"type": "string",
+					"x-example": ""
+				},
+				"SuframaNumber": {
+					"type": "string",
+					"x-example": ""
+				},
+				"SupplementaryItemGroupId": {
+					"type": "string",
+					"x-example": ""
+				},
+				"TaxExemptNumber": {
+					"type": "string",
+					"x-example": ""
+				},
+				"TaxRegistrationId": {
+					"type": "string",
+					"x-example": ""
+				},
+				"TCSGroup": {
+					"type": "string",
+					"x-example": ""
+				},
+				"TDSGroup": {
+					"type": "string",
+					"x-example": ""
+				},
+				"TotalDiscountCode": {
+					"type": "string",
+					"x-example": ""
+				},
+				"TransactionPresenceType": {
+					"type": "string",
+					"x-example": "DoesNotApply"
+				},
+				"VendorAccount": {
+					"type": "string",
+					"x-example": ""
+				},
+				"WarehouseFulfillmentRate": {
+					"type": "integer",
+					"format": "int32",
+					"x-example": "0"
+				},
+				"WarehouseFulfillmentType": {
+					"type": "string",
+					"x-example": "None"
+				},
+				"WarehouseId": {
+					"type": "string",
+					"x-example": ""
+				},
+				"WarehouseIsASNGenerated": {
+					"type": "string",
+					"x-example": "No"
+				},
+				"WarehouseIsEntireShipmentFilled": {
+					"type": "string",
+					"x-example": "No"
+				},
+				"WithholdingTaxGroupCode": {
+					"type": "string",
+					"x-example": ""
+				},
+				"WriteoffReason": {
+					"type": "string",
+					"x-example": ""
+				}
+			}
+		}
+	},
+	"securityDefinitions": {},
+	"security": [],
+	"tags": [{
+			"name": "Customers",
+			"description": "Operations about Customers"
+		}
+	]
+}
